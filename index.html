@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Piedra Papel o Tijeras</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=2dTGyI-omJCdTRTD4CCLQ0khiT7wru9RjqDYxQJEhU8SoaFAuisHzA5tYEOH7lv6ravGwNGdHNUJKstpufFjxQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly94eGFuZHJveHguZ2l0aHViLmlvL3Byb3llY3RvRmluYWxKUy8"/></head>
+<body>
+    <section class="contenedor-login">
+        <div class="contenido-login contenedor">
+            <div class="contenedor-titulo">
+                <div class="titulo-login">
+                    <h3>Login</h3>
+                </div>
+            </div>
+            <form id="formulario-login" class="contenido-formulario-login">    
+                <div class="contenedor-usuario">
+                    <label>Usuario</label>
+                    <input id="input-usuario" type="text"> <span id="incorrecto-usuario"></span>
+                </div>
+                <div class="contenedor-contraseña">
+                    <label>Contraseña</label>
+                    <input id="input-contraseña" type="password">  <span id="incorrecto-contraseña"></span>
+                </div>
+                <div class="btn-login">
+                    <button id="btn-login">Aceptar</button>
+                </div>
+            </form>
+
+            <div class="contenido-ayuda">
+                <br>
+                <br>
+                <p>usuario: user</p>
+                <p>contraseña: 1234</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="contenido-juego">
+        <header class="header contenedor">
+            <h1>Piedra Papel Tijera</h1>
+        </header>
+        <section class="btn-jugar">
+            <h2>Jugar</h2>
+        </section>
+        <main class="main-juego contenedor">
+            <div class="contenedor-puntaje">
+                <h2>Puntaje:</h2>
+                <h2 id="puntaje">0</h2>
+            </div>
+            <div class="contenedor-jugadores">
+                <section class="contenedor-jugador">
+                    <h2>Jugador</h2>
+                    <div class="img-principal">
+                        <img id="img-principal-usuario" src="img/interrogacion.png" alt="img-principal">
+                    </div>
+
+                    <div class="seleccion-img">
+                        <img id="img-piedra" src="img/left-st.jpg" alt="piedra-img">
+                        <img id="img-papel" src="img/left-pp.jpg" alt="papel-img">
+                        <img id="img-tijera" src="img/left-sc.jpg" alt="tijera-img">
+                    </div>
+                </section>
+
+                <section class="contenedor-aviso">
+                    <h2 id="aviso"></h2>
+                </section>
+
+                <section class="contenedor-jugador">
+                    <h2>IA</h2>
+                    <div class="img-principal">
+                        <img id="img-principal-ia" src="img/interrogacion.png" alt="img-principal">
+                    </div>
+
+                    <div id="seleccion-img" class="seleccion-img">
+                        <img src="img/right-sc.jpg" alt="tijera-img">
+                        <img src="img/right-pp.jpg" alt="papel-img">
+                        <img src="img/right-st.jpg" alt="piedra-img">
+                    </div>
+                </section>
+            </div>
+            <audio id="musica-fondo" src="music/tetris.mp3"></audio>
+
+        </main>
+         <section class="contenedor-gameover">
+            <div class="contenido-gameover">
+                <h2 id="puntaje-final"></h2>
+                <p id="btn-reintentar">Volver a jugar</p>
+            </div>
+        </section>
+
+        <section class="contenedor-puntajes-anteriores contenedor">
+            <div class="contenido-puntajes-anteriores">
+                <h3>Ultimos 5 Puntos</h3>
+                <ul id='mostrar-puntajes'></ul>      
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>© Benjamín Felipe Nilo Palacios (12-01-2022)</p>
+    </footer>
+    <script src="js/login.js"></script>
+    <script src="js/juego.js"></script>
+</body>
+</html>
